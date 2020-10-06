@@ -20,16 +20,20 @@
     </properties>
 
     <dependencies>
+        <!-- RabbitMQ Spring Cloud starter-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-stream</artifactId>
+            <artifactId>spring-cloud-starter-stream-rabbit</artifactId>
         </dependency>
 
+        <!-- Lombok Tool -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
+
+        <!-- Spring Boot Test starter-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -41,6 +45,7 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        <!-- Spring Cloud Test starter-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-stream-test-support</artifactId>
@@ -68,9 +73,6 @@
             <version>1.7.26</version>
             <scope>test</scope>
         </dependency>
-
-
-
     </dependencies>
 
     <dependencyManagement>
