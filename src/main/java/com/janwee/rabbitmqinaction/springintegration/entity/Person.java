@@ -3,11 +3,13 @@ package com.janwee.rabbitmqinaction.springintegration.entity;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 @Getter
 @Setter
-public class Person {
+public class Person implements Serializable {
+    private static final long serialVersionUID = 3169843032553245703L;
     private String name;
 
     @Override

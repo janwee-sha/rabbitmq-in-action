@@ -17,5 +17,8 @@ spring:
             dlq-ttl: true #dead letter queue time out
             dlq-dead-letter-exchange: dead-letter #dead letter exchange
           group: ${spring.application.name}
+        inputPerson:
+          destination: person
+          group: ${spring.application.name}
   application:
     name: rabbitmq-in-action
