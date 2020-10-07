@@ -3,3 +3,19 @@ spring:
     addresses: 192.168.136.130
     username: janwee
     password: janwee
+  cloud:
+    stream:
+      binders:
+        boss:
+          type: rabbit
+      bindings:
+        inputText:
+          destination: text #exchange text
+          consumer:
+            max-attemps: 1 #disable binder retries
+            auto-bind-dlq: true #enable auto bind to dead letter queue
+            dlq-ttl: true #dead letter queue time out
+            dlq-dead-letter-exchange: dead-letter #dead letter exchange
+          group: ${spring.application.name}
+  application:
+    name: rabbitmq-in-action
