@@ -1,6 +1,6 @@
-package com.janwee.rabbitmqinaction.springintegration.entity.message.consumer;
+package com.janwee.rabbitmqinaction.springintegration.message.consumer;
 
-import com.janwee.rabbitmqinaction.springintegration.entity.message.channel.InputChannels;
+import com.janwee.rabbitmqinaction.springintegration.message.channel.InputChannels;
 import org.springframework.cloud.stream.annotation.StreamListener;
 import org.springframework.stereotype.Component;
 

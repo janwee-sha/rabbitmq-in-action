@@ -1,7 +1,7 @@
 package com.janwee.rabbitmqinaction;
 
 import com.janwee.rabbitmqinaction.springintegration.entity.Person;
-import com.janwee.rabbitmqinaction.springintegration.entity.message.channel.InputChannels;
+import com.janwee.rabbitmqinaction.springintegration.message.channel.InputChannels;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.stream.annotation.EnableBinding;

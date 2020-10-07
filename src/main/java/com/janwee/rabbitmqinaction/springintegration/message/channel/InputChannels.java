@@ -1,4 +1,4 @@
-package com.janwee.rabbitmqinaction.springintegration.entity.message.channel;
+package com.janwee.rabbitmqinaction.springintegration.message.channel;
 
 import org.springframework.cloud.stream.annotation.Input;
 import org.springframework.messaging.SubscribableChannel;
