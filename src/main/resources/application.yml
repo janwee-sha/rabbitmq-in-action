@@ -1,4 +1,8 @@
+server:
+  port: 30000
 spring:
+  application:
+    name: rabbitmq-in-action
   rabbitmq:
     addresses: 192.168.136.130
     username: janwee
@@ -20,5 +24,3 @@ spring:
         inputPerson:
           destination: person
           group: ${spring.application.name}
-  application:
-    name: rabbitmq-in-action
