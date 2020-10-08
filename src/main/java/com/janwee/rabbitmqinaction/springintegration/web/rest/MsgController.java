@@ -27,7 +27,7 @@ public class MsgController {
     @PostMapping("/person")
     @ApiOperation("send a object serialization data to queue person")
     @ResponseBody
-    public void sendPerson(@ApiParam(value = "*plain text message", required = true) @RequestBody Person person) {
+    public void sendPerson(@ApiParam(value = "*person entity", required = true) @RequestBody Person person) {
         msgProducer.publishPerson(person);
     }
 }
