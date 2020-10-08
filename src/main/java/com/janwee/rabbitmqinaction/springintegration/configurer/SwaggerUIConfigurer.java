@@ -1,4 +1,4 @@
-package com.janwee.rabbitmqinaction.springintegration.configuration;
+package com.janwee.rabbitmqinaction.springintegration.configurer;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties;
@@ -19,7 +19,8 @@ import java.util.Date;
 
 @Configuration
 @EnableSwagger2
-public class SwaggerConfiguration {
+public class SwaggerUIConfigurer {
+
     /**
      * Swagger2 API Title
      */

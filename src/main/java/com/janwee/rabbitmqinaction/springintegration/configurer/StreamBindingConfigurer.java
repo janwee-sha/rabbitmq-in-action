@@ -1,4 +1,4 @@
-package com.janwee.rabbitmqinaction.springintegration.configuration;
+package com.janwee.rabbitmqinaction.springintegration.configurer;
 
 
 import com.janwee.rabbitmqinaction.springintegration.message.channel.InputChannels;
@@ -8,5 +8,5 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @EnableBinding({InputChannels.class, OutputChannels.class})
-public class StreamBindingConfiguration {
+public class StreamBindingConfigurer {
 }

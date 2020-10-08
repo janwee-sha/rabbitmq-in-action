@@ -24,3 +24,7 @@ spring:
         inputPerson:
           destination: person
           group: ${spring.application.name}
+        outputText:
+          destination: text
+        outputPerson:
+          destination: person
