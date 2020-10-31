@@ -4,7 +4,7 @@ spring:
   application:
     name: rabbitmq-in-action
   rabbitmq:
-    addresses: 192.168.136.130
+    addresses: 192.168.136.133
     username: janwee
     password: janwee
   cloud:
@@ -14,15 +14,12 @@ spring:
           type: rabbit
       bindings:
         inputText:
-          destination: text #exchange text
-          consumer:
-            max-attemps: 1 #disable binder retries
-            auto-bind-dlq: true #enable auto bind to dead letter queue
-            dlq-ttl: true #dead letter queue time out
-            dlq-dead-letter-exchange: dead-letter #dead letter exchange
+          destination: text
           group: ${spring.application.name}
         inputPerson:
           destination: person
+          producer:
+            deadLetterQueueName: personDLQ
           group: ${spring.application.name}
         outputText:
           destination: text

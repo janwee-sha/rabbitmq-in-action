@@ -1,7 +1,7 @@
 package com.janwee.rabbitmqinaction.springintegration.web.rest;
 
 import com.janwee.rabbitmqinaction.springintegration.entity.Person;
-import com.janwee.rabbitmqinaction.springintegration.message.producer.MessageProducer;
+import com.janwee.rabbitmqinaction.springintegration.message.publisher.MessagePublisher;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/msg")
 public class MsgController {
-    private MessageProducer msgProducer;
+    private MessagePublisher msgProducer;
 
     @Autowired
-    public MsgController(MessageProducer msgProducer) {
+    public MsgController(MessagePublisher msgProducer) {
         this.msgProducer = msgProducer;
     }
 
